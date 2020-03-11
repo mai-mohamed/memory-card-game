@@ -1,0 +1,167 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #000;
+	overflow: hidden;
+}
+
+.overlay-start {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #CA0000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+}
+
+.btn {
+	padding: 22px 53px;
+	border-radius: 68% 32% 40% 60% / 15% 66% 34% 85%;
+	border: 1px solid #fff;
+	background-color: #fff;
+	font-size: 40px;
+	cursor: pointer;
+	transition: all 1s
+}
+
+.btn:hover {
+	transform: scale(1.3);
+}
+
+.overlay-start img {
+	transform: scale(.8);
+	animation: scale-img 3s infinite;
+}
+
+@keyframes scale-img {
+	0% {
+		transform: scale(.8)
+	}
+	50% {
+		transform: scale(1)
+	}
+	100% {
+		transform: scale(.8)
+	}
+}
+
+
+/*===
+cards
+===*/
+
+.card__wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.card {
+	width: 200px;
+	height: 200px;
+	color: #fff;
+	border-radius: 30px;
+	font-size: 40px;
+	text-transform: capitalize;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background-color: #CA0000;
+	transform: rotateY(180deg);
+	border: 2px solid #fff;
+}
+
+.flip-card-inner {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+	margin: 20px
+}
+
+.flip-card-front,
+.flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.flip-card-front {
+	background-color: rgb(247, 244, 244);
+	border-radius: 20px;
+	border: 1px solid #fff;
+}
+
+.flip-card-front img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+
+/*===
+success overlay
+===*/
+
+.overlay-success {
+	position: fixed;
+	top: 150%;
+	left: 10%;
+	right: 10%;
+	width: 80%;
+	height: 50vh;
+	background-color: #CA0000;
+	z-index: 3;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	border-radius: 20px;
+	transition: all .5s
+}
+
+.overlay-success figure {
+	height: 80%
+}
+
+.overlay-success img {
+	object-fit: contain;
+	height: 100%;
+}
+
+.overlay-success h1 {
+	color: #fff;
+	font-size: 40px;
+	text-transform: uppercase;
+	margin-bottom: 30px
+}
+#score{
+	display:none
+}
+
+/*===
+timer
+===*/
+
+.timer {
+	background-color: #F7F4F4;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
